@@ -1,16 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { SummaryComponent } from './components/summary/summary.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ManageComponent } from './components/manage/manage.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutes } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SummaryComponent,
+    DashboardComponent,
+    ManageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpClientModule,
+    AppRoutes
   ],
   providers: [],
   bootstrap: [AppComponent]
